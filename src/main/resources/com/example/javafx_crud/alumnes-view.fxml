@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="1078.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_crud.controllers.AlumnesController">
+   <children>
+      <Label layoutX="202.0" layoutY="14.0" text="Alumnes">
+         <font>
+            <Font size="51.0" />
+         </font>
+      </Label>
+      <Pane layoutX="14.0" layoutY="100.0" prefHeight="217.0" prefWidth="253.0" style="-fx-background-color: gray;">
+         <children>
+            <Label layoutX="14.0" layoutY="36.0" text="Nom :" />
+            <Label layoutX="14.0" layoutY="65.0" text="Cognoms :" />
+            <Label layoutX="14.0" layoutY="101.0" text="Data Naixament :" />
+            <Label layoutX="14.0" layoutY="138.0" text="Curs : " />
+            <Label layoutX="16.0" layoutY="176.0" text="Progenitors : " />
+            <TextField fx:id="txtNom" layoutX="87.0" layoutY="32.0" />
+            <TextField fx:id="txtCognom" layoutX="87.0" layoutY="61.0" />
+            <TextField fx:id="txtNaix" layoutX="119.0" layoutY="97.0" prefHeight="25.0" prefWidth="121.0" />
+            <TextField fx:id="txtCurs" layoutX="91.0" layoutY="134.0" />
+            <TextField fx:id="txtProgenitors" layoutX="91.0" layoutY="172.0" />
+         </children>
+      </Pane>
+      <TableView fx:id="table" layoutX="300.0" layoutY="100.0" prefHeight="496.0" prefWidth="763.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="NomColumn" prefWidth="75.0" text="Nom" />
+            <TableColumn fx:id="CognomColumn" prefWidth="117.99993896484375" text="Cognoms" />
+            <TableColumn fx:id="NaixColumn" prefWidth="110.66668701171875" text="Data Naixament" />
+            <TableColumn fx:id="cursColumn" prefWidth="113.33331298828125" text="Curs" />
+            <TableColumn fx:id="progenitorsColumn" prefWidth="270.666748046875" text="Progenitors" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAdd" layoutX="19.0" layoutY="326.0" mnemonicParsing="false" onAction="#Add" text="Add">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="19.0" layoutY="401.0" mnemonicParsing="false" onAction="#Update" text="Update">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="19.0" layoutY="477.0" mnemonicParsing="false" onAction="#Delete" text="Delete">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Button>
+      <Button layoutX="79.0" layoutY="552.0" mnemonicParsing="false" onAction="#SwitchToScene_Menu" text="Back Menu">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
